@@ -294,7 +294,7 @@
 
 
   /* ========================== 
-   Navarbar Active Link
+   Navbar Active Link
    ==========================*/
   const sections = document.querySelectorAll("section[id]");
   const navigationLinks = document.querySelectorAll(".navigation a");
