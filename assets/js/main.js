@@ -351,31 +351,39 @@
   });
 
   var portfoioSlider = new Swiper(".portfolio-slider", {
-    spaceBetween: 30,
+    spaceBetween: 24,
+    loop: false,
     autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
+      delay: 3000,
+      disableOnInteraction: true,
     },
-    loop: true,
+    navigation: {
+      nextEl: ".portfolio-btn-next",
+      prevEl: ".portfolio-btn-prev",
+    },
     pagination: {
       el: ".portfolio-pagination",
       clickable: true,
+      dynamicBullets: true,
     },
     breakpoints: {
       320: {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
       },
       567: {
-        slidesPerView: 2.2,
+        slidesPerView: 2,
       },
       776: {
-        slidesPerView: 2.8,
+        slidesPerView: 2,
       },
       992: {
-        slidesPerView: 3.5,
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
       },
       2200: {
-        slidesPerView: 4.5,
+        slidesPerView: 4,
       },
     },
   });

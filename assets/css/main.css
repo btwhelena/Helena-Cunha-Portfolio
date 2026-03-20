@@ -2558,3 +2558,192 @@ header .v-dark.header-defult .main-nav ul li a {
   -webkit-transition: all .1s ease;
   transition: all .1s ease;
 }
+
+/* ===== PORTFOLIO CARD IMPROVEMENTS ===== */
+.portfolio-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin: 0.35rem 0 0.6rem;
+    line-height: 1.4;
+}
+
+.portfolio-link {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.portfolio-link:hover {
+    color: var(--primary-color, #7b2ff7);
+}
+
+.portfolio-title a {
+    font-size: 1.25rem;
+}
+
+/* ===== PORTFOLIO SLIDER FIX ===== */
+.portfolio-pagination {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    transform: none !important;
+}
+
+.portfolio-pagination .swiper-pagination-bullet {
+    display: inline-block !important;
+}
+
+/* ===== MOBILE RESPONSIVENESS FIXES ===== */
+
+/* Hero subtitle - muito longo no mobile */
+@media screen and (max-width: 576px) {
+  .hero_style__one h4 {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 16px;
+  }
+
+  /* Botoes hero empilhados no mobile */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+
+  /* Carrossel mobile - 1 card por vez, sem cortar */
+  .portfolio-style-one .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* portfolio-desc e portfolio-link menores no mobile */
+  .portfolio-desc {
+    font-size: 0.78rem;
+  }
+
+  .portfolio-link {
+    font-size: 0.82rem;
+  }
+
+  /* Intro text menor no mobile */
+  .intro-text-content h3 {
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /* Intro text */
+  .intro-text-content h3 {
+    font-size: 26px;
+  }
+
+  /* portfolio-desc legível no tablet */
+  .portfolio-desc {
+    font-size: 0.82rem;
+  }
+}
+
+/* Garante que imagens dos cards nao overflow */
+.portfolio-card .portfolio-img img {
+  width: 100%;
+}
+
+/* Skill list chips - wrap correto no mobile */
+@media screen and (max-width: 576px) {
+  .skill-list {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .fun__counter .single-funt-count h4 {
+    font-size: 36px;
+  }
+}
+
+/* Footer email legível no mobile */
+@media screen and (max-width: 576px) {
+  .footer-email a {
+    font-size: 14px;
+    word-break: break-all;
+  }
+}
+
+/* ===== PORTFOLIO SLIDER - SETAS LATERAIS ===== */
+.portfolio-slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.portfolio-slider-wrapper .swiper {
+    flex: 1;
+    min-width: 0;
+}
+
+.portfolio-btn-prev,
+.portfolio-btn-next {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.portfolio-btn-prev:hover,
+.portfolio-btn-next:hover {
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+    background: rgba(123, 47, 247, 0.1);
+}
+
+.portfolio-btn-prev.swiper-button-disabled,
+.portfolio-btn-next.swiper-button-disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.portfolio-pagination {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    transform: none !important;
+}
+
+.portfolio-pagination .swiper-pagination-bullet {
+    display: inline-block !important;
+}
+
+/* Mobile: 1 card por vez, setas menores */
+@media screen and (max-width: 576px) {
+    .portfolio-btn-prev,
+    .portfolio-btn-next {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 14px;
+    }
+
+    .portfolio-slider-wrapper {
+        gap: 10px;
+    }
+}
